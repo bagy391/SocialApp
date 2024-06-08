@@ -4,7 +4,8 @@
 		"name": "Assignment",
 		"description": "Hit Login API before accessing other api's\n\nLogin/Signup Api is unauthenticated",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "17951063"
+		"_exporter_id": "17951063",
+		"_collection_link": "https://www.postman.com/aerospace-cosmologist-60404703/workspace/narasimha-rangan/collection/17951063-9a433acf-4fc4-46a3-a7ea-c6b4ad53da59?action=share&source=collection_link&creator=17951063"
 	},
 	"item": [
 		{
@@ -15,10 +16,12 @@
 					"script": {
 						"exec": [
 							"var xsrfCookie = postman.getResponseCookie(\"csrftoken\");",
+							"pm.collectionVariables.set(\"csrftoken\", xsrfCookie.value);",
 							"postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);",
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
